@@ -1,6 +1,7 @@
 import os
 import datetime
 from pathlib import Path
+import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -147,6 +148,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -164,3 +167,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'wpapuna1995@gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = "pgsa hpmv ezzb tdkd"
+django_on_heroku.settings((locals()))
